@@ -1,3 +1,3 @@
-# Django Rest Frameowrk Usser Authentication Satarter Project
+# DRF User Authentication Starter Project
 
 ## For Personal Use
