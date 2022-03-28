@@ -18,8 +18,12 @@ from django.urls import include, path
 
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import path, re_path as url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api-auth/', include("rest_framework.urls")),
+    path('api/', include('profiles.api.urls')),
+    path("api-auth/", include("rest_framework.urls")),
+    path('api/dj-rest-auth/', include('dj_rest_auth.urls')),
+    path('api/dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
